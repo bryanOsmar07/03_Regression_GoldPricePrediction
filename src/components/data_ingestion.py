@@ -88,6 +88,8 @@ class DataIngestion:
 
 
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
+
 if __name__ == "__main__":
     obj = DataIngestion()
     # Probar el data_ingestion
@@ -96,4 +98,11 @@ if __name__ == "__main__":
     # Probar el data_transformation
     train_data, test_data = obj.initiate_data_ingestion()
     data_transformation = DataTransformation()
-    data_transformation.initiate_data_transformation(train_data,test_data)
+    #data_transformation.initiate_data_transformation(train_data,test_data)
+
+    # Probar el model_trainer
+    train_arr, test_arr, processor_path, _ = data_transformation.initiate_data_transformation(
+        train_data, test_data
+    )
+    modeltrainer = ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr, test_arr))

@@ -39,8 +39,8 @@ class DataTransformation:
         self.feature_cols = [
             "SLV", "EUR/USD", "SPX", "USO",
             "year", "month", "week", "dayofyear",
-            "ret_SPX", "ret_USO", "ret_SLV", "ret_EURUSD", "ret_GLD",
-            "vol_SPX_7", "vol_GLD_7"
+            "ret_SPX", "ret_USO", "ret_SLV", "ret_EURUSD",
+            "vol_SPX_7",
         ]
         self.target_col = "GLD"
 
@@ -96,11 +96,11 @@ class DataTransformation:
         df["ret_USO"] = df["USO"].pct_change()
         df["ret_SLV"] = df["SLV"].pct_change()
         df["ret_EURUSD"] = df["EUR/USD"].pct_change()
-        df["ret_GLD"] = df["GLD"].pct_change()
+        #df["ret_GLD"] = df["GLD"].pct_change()
 
         # Volatilidades rolling 7 días
         df["vol_SPX_7"] = df["SPX"].pct_change().rolling(7).std()
-        df["vol_GLD_7"] = df["GLD"].pct_change().rolling(7).std()
+        #df["vol_GLD_7"] = df["GLD"].pct_change().rolling(7).std()
 
         # Eliminamos filas con NaN generados por pct_change/rolling
         df = df.dropna().reset_index(drop=True)
