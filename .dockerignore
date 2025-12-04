@@ -1,0 +1,15 @@
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.log
+.git
+.gitignore
+.artifacts_cache
+pytest_cache
+.notebooks
+notebooks
+artifacts/data.csv
+artifacts/train.csv
+artifacts/test.csv
