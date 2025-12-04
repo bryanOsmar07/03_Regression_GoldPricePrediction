@@ -1,10 +1,11 @@
 # tests/test_utils.py
 
 import os
+
 import pytest
 
-from src.utils import save_object, load_object
 from src.exception import CustomException
+from src.utils import load_object, save_object
 
 
 def test_save_and_load_object(tmp_path):

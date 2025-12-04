@@ -1,6 +1,7 @@
 # tests/test_predict_pipeline.py
 
 import os
+
 import numpy as np
 import pandas as pd
 

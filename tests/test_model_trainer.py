@@ -1,7 +1,7 @@
 # tests/test_model_trainer.py
 
-import os
 import math
+import os
 
 from src.components.data_ingestion import DataIngestion
 from src.components.data_transformation import DataTransformation

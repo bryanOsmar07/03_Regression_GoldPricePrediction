@@ -8,7 +8,6 @@ import streamlit as st
 
 from src.pipeline.predict_pipeline import PredictPipeline
 
-
 st.set_page_config(
     page_title="Gold Price Prediction",
     page_icon="🪙",

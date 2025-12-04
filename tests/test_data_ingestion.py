@@ -1,6 +1,7 @@
 # tests/test_data_ingestion.py
 
 import os
+
 import pandas as pd
 
 from src.components.data_ingestion import DataIngestion

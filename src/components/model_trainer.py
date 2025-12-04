@@ -9,8 +9,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import RandomizedSearchCV
 
-from src.logger import logging
 from src.exception import CustomException
+from src.logger import logging
 from src.utils import save_object
 
 
