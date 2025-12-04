@@ -20,6 +20,7 @@ class ModelTrainerConfig:
     Rutas de salida de la etapa de entrenamiento del modelo.
     - trained_model_file_path: ruta donde se guardará el mejor modelo.
     """
+
     trained_model_file_path: str = os.path.join("artifacts", "model_rf_tuned.pkl")
 
 
@@ -40,10 +41,7 @@ class ModelTrainer:
         """
         Devuelve el modelo base a entrenar.
         """
-        return RandomForestRegressor(
-            random_state=42,
-            n_jobs=-1
-        )
+        return RandomForestRegressor(random_state=42, n_jobs=-1)
 
     def _get_param_distributions(self) -> dict:
         """

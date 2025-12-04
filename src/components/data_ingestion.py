@@ -19,6 +19,7 @@ class DataIngestionConfig:
     Configuración de rutas para la ingesta de datos.
     Ajusta raw_data_path si guardas el CSV en otra ubicación.
     """
+
     raw_data_path: str = os.path.join("artifacts", "data.csv")
     train_data_path: str = os.path.join("artifacts", "train.csv")
     test_data_path: str = os.path.join("artifacts", "test.csv")

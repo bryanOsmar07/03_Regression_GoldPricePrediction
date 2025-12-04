@@ -85,9 +85,7 @@ class PredictPipeline:
         self.preprocessor_path = preprocessor_path or os.path.join(
             "artifacts", "preprocessor.pkl"
         )
-        self.features_path = features_path or os.path.join(
-            "artifacts", "features.pkl"
-        )
+        self.features_path = features_path or os.path.join("artifacts", "features.pkl")
 
     def predict(self, features: pd.DataFrame) -> np.ndarray:
         """

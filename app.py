@@ -125,9 +125,18 @@ def build_features_from_input(
 
     # 8. Seleccionar solo las columnas de features
     feature_cols = [
-        "SLV", "EUR/USD", "SPX", "USO",
-        "year", "month", "week", "dayofyear",
-        "ret_SPX", "ret_USO", "ret_SLV", "ret_EURUSD",
+        "SLV",
+        "EUR/USD",
+        "SPX",
+        "USO",
+        "year",
+        "month",
+        "week",
+        "dayofyear",
+        "ret_SPX",
+        "ret_USO",
+        "ret_SLV",
+        "ret_EURUSD",
         "vol_SPX_7",
     ]
     df_input = df_input[feature_cols]

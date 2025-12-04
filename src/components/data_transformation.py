@@ -22,6 +22,7 @@ class DataTransformationConfig:
     - preprocessor_obj_file_path: objeto de preprocesamiento de sklearn
     - features_obj_file_path: lista de columnas usadas como features
     """
+
     preprocessor_obj_file_path: str = os.path.join("artifacts", "preprocessor.pkl")
     features_obj_file_path: str = os.path.join("artifacts", "features.pkl")
 
@@ -36,9 +37,18 @@ class DataTransformation:
         self.data_transformation_config = DataTransformationConfig()
         # Variables finales definidas en el EDA (features del modelo)
         self.feature_cols = [
-            "SLV", "EUR/USD", "SPX", "USO",
-            "year", "month", "week", "dayofyear",
-            "ret_SPX", "ret_USO", "ret_SLV", "ret_EURUSD",
+            "SLV",
+            "EUR/USD",
+            "SPX",
+            "USO",
+            "year",
+            "month",
+            "week",
+            "dayofyear",
+            "ret_SPX",
+            "ret_USO",
+            "ret_SLV",
+            "ret_EURUSD",
             "vol_SPX_7",
         ]
         self.target_col = "GLD"
