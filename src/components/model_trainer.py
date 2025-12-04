@@ -55,11 +55,15 @@ class ModelTrainer:
             "max_depth": [None, 5, 10, 15, 20],
             "min_samples_split": [2, 5, 10],
             "min_samples_leaf": [1, 2, 4],
-            "max_features": ["auto", "sqrt", 0.5, 0.7],
+            "max_features": ["sqrt", 0.5, 0.7],
         }
         return param_dist
 
-    def initiate_model_trainer(self, train_array: np.ndarray, test_array: np.ndarray) -> dict:
+    def initiate_model_trainer(
+        self,
+        train_array: np.ndarray,
+        test_array: np.ndarray,
+    ) -> dict:
         """
         Entrena el modelo de Machine Learning usando los datos transformados
         y evalúa su desempeño sobre el conjunto de prueba.

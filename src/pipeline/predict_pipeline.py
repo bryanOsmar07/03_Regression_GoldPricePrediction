@@ -81,7 +81,7 @@ class PredictPipeline:
         preprocessor_path: str | None = None,
         features_path: str | None = None,
     ):
-        self.model_path = model_path or os.path.join("artifacts", "model.pkl")
+        self.model_path = model_path or os.path.join("artifacts", "model_rf_tuned.pkl")
         self.preprocessor_path = preprocessor_path or os.path.join(
             "artifacts", "preprocessor.pkl"
         )
